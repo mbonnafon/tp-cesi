@@ -25,7 +25,7 @@ docker run -p <port_hote>:<container_port> <image_name>
 
 Executer bash dans un conteneur:
 ``` bash
-docker run --it <image_name> /bin/bash
+docker run -it <image_name> /bin/bash
 ```
 
 Liste les conteneurs actifs:

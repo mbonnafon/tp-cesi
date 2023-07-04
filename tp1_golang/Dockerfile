@@ -15,5 +15,3 @@ EXPOSE 8080
 # Démarrez le serveur web lorsque le conteneur démarre
 CMD ["./server"]
 
-
-

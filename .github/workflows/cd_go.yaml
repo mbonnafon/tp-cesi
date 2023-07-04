@@ -1,8 +1,6 @@
 name: Bump version
 on:
-  push:
-    branches:
-      - master
+  pull_request:
 
 jobs:
   release:
@@ -24,12 +22,6 @@ jobs:
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
 
-      - name: Current release
-        run: echo ${{github.ref_name}}
-
-  publish_release:
-    runs-on: ubuntu-latest
-    steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       
@@ -47,4 +39,4 @@ jobs:
         with:
           push: true
           file: tp1_golang/Dockerfile
-          tags: mbonnafon/tp-cesi:${{github.ref_name}}
+          tags: mbonnafon/tp-cesi:${{ steps.tag_version.outputs.new_tag }}

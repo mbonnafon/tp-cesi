@@ -9,7 +9,8 @@ COPY . .
 
 # Compilez l'application Go
 RUN go build -o server .
-
+ 
+ 
 # Exposez le port sur lequel votre serveur web écoute
 EXPOSE 8080
 

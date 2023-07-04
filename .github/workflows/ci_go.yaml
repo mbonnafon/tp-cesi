@@ -55,4 +55,4 @@ jobs:
         with:
           push: true
           file: tp1_golang/Dockerfile
-          tags: mbonnafon/tp-cesi:latest
+          tags: mbonnafon/tp-cesi:${{github.event.pull_request.head.sha}}

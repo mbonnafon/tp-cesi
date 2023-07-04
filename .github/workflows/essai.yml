@@ -5,5 +5,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
-            -   run: go test
-            -   run: go build -o server
+
+            -   name: Test
+                run: go test
+
+            -   name: Build
+                run: go build -o server

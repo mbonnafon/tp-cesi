@@ -1,0 +1,29 @@
+name: Go package
+
+on:
+  pull_request:
+    paths: 
+      - 'tp1_golang/**'
+
+defaults:
+  run:
+    working-directory: tp1_golang
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.20'
+
+      - name: Build
+        run: go build        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: go test

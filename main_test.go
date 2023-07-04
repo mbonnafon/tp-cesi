@@ -8,6 +8,7 @@ import (
 
 func TestHealthCheckHandler(t *testing.T) {
 	req, err := http.NewRequest("GET", "/health-check", nil)
+	
 	if err != nil {
 		t.Fatal(err)
 	}

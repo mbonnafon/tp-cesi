@@ -1,5 +1,5 @@
 # Install
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+https://developer.hashicorp.com/terraform/downloads
 
 # Formatter le code
 ```

@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . . 
 
 # Compilez l'application Go
-RUN go build -o server .
+RUN go build -o server ./tp1_golang
 
 # Exposez le port sur lequel votre serveur web écoute
 EXPOSE 8080

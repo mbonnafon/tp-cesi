@@ -2,12 +2,6 @@
 
 https://docs.docker.com/compose/install/
 
-# Build l'image docker du proxy
-
-```
-docker build -t tp3 .
-```
-
 # Lancez la stack avec
 
 ```

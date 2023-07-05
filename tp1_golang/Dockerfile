@@ -5,7 +5,7 @@ FROM golang:latest
 WORKDIR /app
 
 # Copiez les fichiers du projet dans le conteneur
-COPY tp1_golang/* .
+COPY . . 
 
 # Compilez l'application Go
 RUN go build -o server .
